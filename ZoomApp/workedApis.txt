@@ -1,0 +1,28 @@
+in the server to server app
+
+https://api.zoom.us/v2/chat/users/me/channels  <-- Creating the channel (in posting)
+https://api.zoom.us/v2/chat/users/me/channels  <-- List of channels (In getting)
+
+https://api.zoom.us/v2/chat/channels/ed5ed710d5484604859f3b0c22949280/members  <-- Sending invitations (Didn't work)
+https://api.zoom.us/v2/chat/users/me/channels/{CHANNEL_ID}/members <-- adding members in a channel from your contact (Post){
+    
+    "members" : [
+        {"email":"id1"},
+        {"email":"id2"}
+        ]
+}
+
+https://api.zoom.us/v2/users/me <-- getting all my data on zoom (Get)
+
+https://api.zoom.us/v2/chat/users/me/messages <-- sending a messege in a channel (Post) {
+
+  "message": "Your message here",
+  "to_channel": "your_channel_id"
+}
+
+https://api.zoom.us/v2/chat/users/me/messages <-- Getting the messeges from a channel (Get) {
+    Params: to_channel> channel id
+            date : YYYY-MM-DD (Optional)
+}
+
+(In the general app there are many functionality which are absent in server to server app)
